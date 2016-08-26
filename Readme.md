@@ -1,3 +1,8 @@
+# About This Fork
+Fork the latest version of brunomlopes. Some changes are made to support timestamp in file name. Using this fork, sql files can be named like yyyyMMddHHmms_DML.sql or yyyyMMddHHmmss_DDL.sql.
+
+修改之前，SQL文件依靠数字记录版本号，依据数字大小决定SQL执行的先后顺序，但数字不能超过 smallint 的最大值，且多人开发时，容易冲突。为解决这个问题，将变更号变成 bigint, 与之对应，代码中的 int 改成 long。这样可以轻松地支持 yyyyMMddHHmmss 作为版本号。DDL 文件可以命名为 yyyyMMddHHmmss_DDL.sql, DML 的命名类似。
+
 # dbdeploy.NET
 
 Manages the deployment of numbered change scripts in versioned folders to a SQL, Oracle, or MySQL database, using a simple table in the database to track applied changes.

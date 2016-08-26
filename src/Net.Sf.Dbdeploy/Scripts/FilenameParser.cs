@@ -13,14 +13,14 @@ namespace Net.Sf.Dbdeploy.Scripts
             this.pattern = new Regex(@"^(\d+)", RegexOptions.Compiled);
         }
 
-        public int ExtractScriptNumberFromFilename(string filename)
+        public long ExtractScriptNumberFromFilename(string filename)
         {
             Match match = this.pattern.Match(filename);
             
             if (!match.Success || match.Groups.Count != 2)
                 throw new UnrecognisedFilenameException("Could not extract a change script number from filename: " + filename);
 
-            return int.Parse(match.Groups[1].Value);
+            return long.Parse(match.Groups[1].Value);
         }
     }
 }

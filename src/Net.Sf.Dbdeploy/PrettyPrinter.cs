@@ -17,8 +17,8 @@ namespace Net.Sf.Dbdeploy
 
             StringBuilder builder = new StringBuilder();
 
-            int? lastRangeStart = null;
-            int? lastNumber;
+            long? lastRangeStart = null;
+            long? lastNumber;
 
             var changesByFolder = changeList.GroupBy(c => c.Folder).ToList();
             bool isFirst;
@@ -73,7 +73,7 @@ namespace Net.Sf.Dbdeploy
             builder.AppendFormat("  {0}\t", folder);
         }
 
-        private void AppendRange(StringBuilder builder, int lastRangeStart, int lastNumber, bool isFirst)
+        private void AppendRange(StringBuilder builder, long lastRangeStart, long lastNumber, bool isFirst)
         {
             if (lastRangeStart == lastNumber)
             {

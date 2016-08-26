@@ -48,7 +48,7 @@ namespace Net.Sf.Dbdeploy.Scripts
 
                 try
                 {
-                    int scriptNumber = this.filenameParser.ExtractScriptNumberFromFilename(filename);
+                    long scriptNumber = this.filenameParser.ExtractScriptNumberFromFilename(filename);
 
                     scripts.Add(new ChangeScript(file.Directory.Name, scriptNumber, file, this.encoding));
                 }

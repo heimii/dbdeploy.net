@@ -44,7 +44,7 @@ namespace Net.Sf.Dbdeploy.Scripts
         /// <param name="scriptNumber">The script number.</param>
         /// <param name="fileInfo">The file.</param>
         /// <param name="encoding">The encoding.</param>
-        public ChangeScript(string folder, int scriptNumber, FileInfo fileInfo, Encoding encoding)
+        public ChangeScript(string folder, long scriptNumber, FileInfo fileInfo, Encoding encoding)
             : base(folder, scriptNumber)
         {
             this.FileInfo = fileInfo;

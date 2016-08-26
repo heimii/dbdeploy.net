@@ -41,7 +41,7 @@
         /// </summary>
         /// <param name="folder">The folder.</param>
         /// <param name="scriptNumber">The script number.</param>
-        public UniqueChange(string folder, int scriptNumber)
+        public UniqueChange(string folder, long scriptNumber)
         {
             this.Folder = folder;
             this.ScriptNumber = scriptNumber;
@@ -65,7 +65,7 @@
         /// <value>
         /// The script number.
         /// </value>
-        public int ScriptNumber { get; private set; }
+        public long ScriptNumber { get; private set; }
 
         /// <summary>
         /// Gets the version of the folder if in the format of (v1.0.0.0) or (1.0.0).
